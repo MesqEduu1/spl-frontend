@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* fundo da página */
+body {
+    height: 100vh;
+    background-color: #cfd6dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* centralização */
+.container {
+    width: 100%;
+    max-width: 380px;
+    padding: 20px;
+}
+
+/* cartão */
+.card {
+    background-color: #f3f4f6;
+    padding: 40px 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* logo */
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #2f7d66;
+    border-radius: 14px;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 10px auto;
+}
+
+/* SPL */
+.brand {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+/* subtitulo */
+.subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* título entrar */
+h1 {
+    font-size: 26px;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+/* grupo de inputs */
+.form-group {
+    margin-bottom: 18px;
+}
+
+/* labels */
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #334155;
+}
+
+/* inputs */
+input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    background-color: #e5e7eb;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* efeito ao clicar */
+input:focus {
+    background-color: white;
+    border: 2px solid #2f7d66;
+}
+
+/* botão */
+.btn {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    background-color: #2f7d66;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* hover botão */
+.btn:hover {
+    background-color: #276b57;
+}
+
+/* mensagem erro */
+.mensagem {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #b91c1c;
+    text-align: center;
+}
+
+/* rodapé */
+.footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* link criar conta */
+.footer a {
+    color: #2f7d66;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
