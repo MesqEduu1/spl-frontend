@@ -1,9 +1,9 @@
 import './style.css'
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import api from "../services/api";
 
 function Home() {
-
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [mensagemErro, setMensagemErro] = useState("");
@@ -13,7 +13,7 @@ function Home() {
     return regex.test(email);
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
     setMensagemErro("");
@@ -23,12 +23,21 @@ function Home() {
       return;
     }
 
-    if (email === "test@mail.com" && senha === "senha") {
-      alert("Em breve o dashboard será disponibilizado.");
-    } else {
-      setMensagemErro(
-        "Usuário ou senha inválido. Caso não seja cadastrado, crie uma conta!"
-      );
+    try {
+
+      const resposta = await api.post('/auth/login', {"email":email, "senha":senha})
+      console.log(email)
+      localStorage.setItem('spl_token', resposta.data.token)
+      
+      //navigate('/triagem')
+    } catch (erro) {
+      if (erro.response) {
+            setMensagemErro(erro.response.data.erro)
+      } else {
+        setMensagemErro('Não foi possível conectar ao servidor. Tente novamente mais tarde.');
+        console.log(erro)
+      }
+    } finally {
     }
   }
 
